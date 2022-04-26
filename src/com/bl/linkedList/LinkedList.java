@@ -1,7 +1,9 @@
 package com.bl.linkedList;
 
 import java.util.Scanner;
-
+/*
+*@author: Sadanand pandey
+*/
 public class LinkedList {
 
 	Node head;
