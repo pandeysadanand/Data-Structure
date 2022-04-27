@@ -70,6 +70,14 @@ class BST_class {
 		}
 	}
 
+	boolean search(int key) {
+		root = search_Recursive(root, key);
+		if (root != null)
+			return true;
+		else
+			return false;
+	}
+
 	// recursive insert function
 	Node search_Recursive(Node root, int key) {
 		if (root == null || root.key == key)
@@ -103,5 +111,10 @@ class BinaryTree {
 		 */
 		System.out.println("The BST Created with input data(Left-root-right):");
 		bst.inorder();
+		System.out.println();
+		System.out.println("Enter number to search : ");
+		int searchNumber = sc.nextInt();
+		boolean ret_val = bst.search (searchNumber);
+        System.out.println(searchNumber +" found in BST:" + ret_val );
 	}
 }
